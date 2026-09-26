@@ -1,0 +1,138 @@
+{
+ "latest_run_id": "20260926T140501+0900_0b87c6556f85",
+ "runs": [
+  {
+   "preset_name": "13-17帯 市場最強1頭軸",
+   "purchase_amount": 20000,
+   "purchase_points": 200,
+   "run_id": "20260926T140501+0900_0b87c6556f85",
+   "run_mode": "SHADOW",
+   "run_mode_label": "SHADOW（記録のみ）",
+   "status": "ALIVE",
+   "surviving_points": 5,
+   "target_date": "2026-09-26"
+  },
+  {
+   "preset_name": "13-17帯 市場最強1頭軸",
+   "purchase_amount": 20000,
+   "purchase_points": 200,
+   "run_id": "20260920T140501+0900_320061f4cf53",
+   "run_mode": "LIVE",
+   "run_mode_label": "LIVE（日曜）",
+   "status": "ALIVE",
+   "surviving_points": 2,
+   "target_date": "2026-09-20"
+  },
+  {
+   "preset_name": "13-17帯 市場最強1頭軸",
+   "purchase_amount": 19700,
+   "purchase_points": 197,
+   "run_id": "20260919T140501+0900_883e05a77d0c",
+   "run_mode": "SHADOW",
+   "run_mode_label": "SHADOW（記録のみ）",
+   "status": "ALIVE",
+   "surviving_points": 1,
+   "target_date": "2026-09-19"
+  },
+  {
+   "preset_name": "13-17帯 市場最強1頭軸",
+   "purchase_amount": 20000,
+   "purchase_points": 200,
+   "run_id": "20260913T140501+0900_df5ecd74725c",
+   "run_mode": "LIVE",
+   "run_mode_label": "LIVE（日曜）",
+   "status": "ALIVE",
+   "surviving_points": 200,
+   "target_date": "2026-09-13"
+  },
+  {
+   "preset_name": "13-17帯 市場最強1頭軸",
+   "purchase_amount": 19400,
+   "purchase_points": 194,
+   "run_id": "20260912T140501+0900_ea7145140c0a",
+   "run_mode": "SATURDAY_E2E",
+   "run_mode_label": "土曜E2E",
+   "status": "ALIVE",
+   "surviving_points": 194,
+   "target_date": "2026-09-12"
+  },
+  {
+   "preset_name": "13-17帯 市場最強1頭軸",
+   "purchase_amount": 19900,
+   "purchase_points": 199,
+   "run_id": "20260906T143501+0900_6b8167e6776d",
+   "run_mode": "LIVE",
+   "run_mode_label": "LIVE（日曜）",
+   "status": "ALIVE",
+   "surviving_points": 199,
+   "target_date": "2026-09-06"
+  },
+  {
+   "preset_name": "13-17帯 市場最強1頭軸",
+   "purchase_amount": 19200,
+   "purchase_points": 192,
+   "run_id": "20260905T143835+0900_e3bd8091b57d",
+   "run_mode": "SATURDAY_E2E",
+   "run_mode_label": "土曜E2E",
+   "status": "ALIVE",
+   "surviving_points": 1,
+   "target_date": "2026-09-05"
+  },
+  {
+   "preset_name": "13-17帯 市場最強1頭軸",
+   "purchase_amount": 19600,
+   "purchase_points": 196,
+   "run_id": "20260905T143501+0900_e820baecabf2",
+   "run_mode": "SATURDAY_E2E",
+   "run_mode_label": "土曜E2E",
+   "status": "ALIVE",
+   "surviving_points": 196,
+   "target_date": "2026-09-05"
+  },
+  {
+   "preset_name": "13-17帯 市場最強1頭軸",
+   "purchase_amount": 19700,
+   "purchase_points": 197,
+   "run_id": "20260830T144001+0900_903db7798515",
+   "run_mode": "LIVE",
+   "run_mode_label": "LIVE（日曜）",
+   "status": "ALIVE",
+   "surviving_points": 197,
+   "target_date": "2026-08-30"
+  },
+  {
+   "preset_name": "13-17帯 市場最強1頭軸",
+   "purchase_amount": 19900,
+   "purchase_points": 199,
+   "run_id": "20260829T144001+0900_d21cd5c73e78",
+   "run_mode": "SATURDAY_E2E",
+   "run_mode_label": "土曜E2E",
+   "status": "ALIVE",
+   "surviving_points": 199,
+   "target_date": "2026-08-29"
+  },
+  {
+   "preset_name": "13-17帯 市場最強1頭軸",
+   "purchase_amount": 20000,
+   "purchase_points": 200,
+   "run_id": "20260823T144904+0900_8fa24a183e5f",
+   "run_mode": "LIVE",
+   "run_mode_label": "LIVE（日曜）",
+   "status": "ALIVE",
+   "surviving_points": 200,
+   "target_date": "2026-08-23"
+  },
+  {
+   "preset_name": "13-17帯 市場最強1頭軸",
+   "purchase_amount": 19800,
+   "purchase_points": 198,
+   "run_id": "20260822T144102+0900_daf4d6ea5113",
+   "run_mode": "SHADOW",
+   "run_mode_label": "SHADOW（記録のみ）",
+   "status": "ALIVE",
+   "surviving_points": 36,
+   "target_date": "2026-08-22"
+  }
+ ],
+ "schema_version": "WIN5_PUBLIC_SURVIVOR_V1"
+}
