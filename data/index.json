@@ -1,6 +1,17 @@
 {
- "latest_run_id": "20260926T140501+0900_0b87c6556f85",
+ "latest_run_id": "20260927T140501+0900_f1f16167b3cd",
  "runs": [
+  {
+   "preset_name": "13-17帯 市場最強1頭軸",
+   "purchase_amount": 19200,
+   "purchase_points": 192,
+   "run_id": "20260927T140501+0900_f1f16167b3cd",
+   "run_mode": "LIVE",
+   "run_mode_label": "LIVE（日曜）",
+   "status": "ALIVE",
+   "surviving_points": 192,
+   "target_date": "2026-09-27"
+  },
   {
    "preset_name": "13-17帯 市場最強1頭軸",
    "purchase_amount": 20000,
