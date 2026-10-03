@@ -127,7 +127,6 @@
     .run .rid{font-size:.68rem;color:#9aa7b4;word-break:break-all}
     .hidden{display:none!important}
     .hud-btns{display:flex;gap:6px}
-    div.horse{cursor:default}
     .run.current{border:2px solid var(--alive-line)}
     .run .mode{font-size:.72rem;font-weight:800;color:var(--accent)}
     .ftable{width:100%;border-collapse:collapse;font-size:.86rem;margin-top:4px}
@@ -136,7 +135,12 @@
     .ftable td.id{color:var(--muted);font-size:.72rem;white-space:nowrap}
     .ftable td.num{font-weight:800;white-space:nowrap}
     .ftable td.leg{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;word-break:break-word}
+    .ftable td.leg b{color:var(--alive)}
     .pub-note{font-size:.76rem;color:var(--muted);text-align:center;margin:4px 0 0}
+    .pick-note{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;
+      border-radius:12px;background:#fff7e6;color:#6b4a00;font-size:.82rem;font-weight:700}
+    .pick-note .btn{padding:8px 11px;font-size:.8rem;background:#fff;color:#6b4a00;border:1px solid #f0d8a8;white-space:nowrap}
+    .hud-btn:disabled{opacity:.35}
 
     @media(min-width:760px){
       main{display:block}
@@ -150,10 +154,10 @@
 <header class="hud">
   <div class="hud-row">
     <div><div class="hud-brand">WIN5</div><div id="state" class="hud-status" data-status="">読み込み中</div></div>
-    <div class="hud-btns"><button id="openPicker" class="hud-btn">過去開催</button><button id="openDetail" class="hud-btn">詳細</button></div>
+    <div class="hud-btns"><button id="clearPicks" class="hud-btn">全解除</button><button id="openPicker" class="hud-btn">過去開催</button><button id="openDetail" class="hud-btn">詳細</button></div>
   </div>
   <div class="hud-count"><span class="prefix">残り</span><b id="alive">-</b><span id="total">/ -点</span></div>
-  <div class="hud-info"><div id="purchaseAmount">購入額 -円</div><div id="anchor">軸 -</div><div id="hudNext" class="hud-next"></div></div>
+  <div class="hud-info"><div id="purchaseAmount">購入額 -円</div><div id="formationAlive">formation -</div><div id="anchor">軸 -</div><div id="hudNext" class="hud-next"></div></div>
   <div id="steps" class="steps"></div>
 </header>
 
@@ -165,6 +169,7 @@
     <div id="runs" class="runs" style="margin-top:12px"></div>
     <div class="actions"><button id="closePicker" class="btn full">閉じる</button></div>
   </section>
+  <div id="pickNote" class="pick-note hidden"></div>
   <div id="board" class="span2" style="display:grid;gap:12px"></div>
   <p class="pub-note" id="updated"></p>
 </main>
@@ -189,6 +194,7 @@
   <h2>詳細</h2>
   <dl class="kv" id="detailBody"></dl>
   <p class="lead" style="margin-top:14px">馬の横の「N点」は、その馬が勝った場合に残る買い目の数です。</p>
+  <p class="lead">馬をタップすると、その馬を含む買い目だけに絞り込みます。もう一度タップすると解除できます。絞り込みはこのブラウザの中だけで行い、PCやサーバーには何も送信しません。再読み込みすると選択は消えます。</p>
   <p class="lead">この画面は閲覧専用の公開版です。表示内容はBUILD済みの買い目と入力済みの勝ち馬で、自動更新されます。</p>
 </div>
 
@@ -201,28 +207,93 @@
 <script>
 // Public read-only copy of win5_live_survivor.html.
 // Reads static JSON only (data/index.json, data/runs/<run_id>.json). No API, no writes.
+// Tapping a horse narrows the published purchase set inside this browser only;
+// the selection lives in memory and is never sent anywhere.
 const $=id=>document.getElementById(id);
 const params=new URLSearchParams(location.search);
 let runId=params.get('run_id')||'';
-let index=null,run=null,view=null,showNames=false,expandedOthers={};
+let index=null,run=null,base=null,view=null,showNames=false,expandedOthers={};
+let combos=null,picks={},edited=false,pickedRun='';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const STATUS={ALIVE:{text:'WIN5 生存中',cls:''},DEAD:{text:'WIN5終了',cls:'dead'},COMPLETE:{text:'WIN5的中！',cls:'win'}};
 const REFRESH_MS=60000;
+
+// survivor-core:start  (pure functions; same rules as tools/win5_survivor_state.view_state)
+const LEGS=[1,2,3,4,5];
+function expandFormations(formations,expectedPoints){
+  // Formations are a disjoint cover of the purchase set; null if they are not.
+  const out=[],seen=new Set();
+  for(const f of formations||[]){
+    const sets=(f.legs||[]).map(l=>l.map(Number));
+    if(sets.length!==5)return null;
+    const walk=(leg,acc)=>{
+      if(leg===5){const key=acc.join('-');if(seen.has(key))return false;seen.add(key);out.push(acc.slice());return true}
+      for(const u of sets[leg]){acc.push(u);if(!walk(leg+1,acc))return false;acc.pop()}
+      return true;
+    };
+    if(!walk(0,[]))return null;
+  }
+  if(!out.length||out.length!==Number(expectedPoints))return null;
+  out.sort((a,b)=>{for(let i=0;i<5;i++)if(a[i]!==b[i])return a[i]-b[i];return 0});
+  return out;
+}
+function computeView(published,purchased,selection){
+  const winners={};
+  for(const [leg,u] of Object.entries(selection||{}))if(u!=null)winners[Number(leg)]=Number(u);
+  const decided=Object.keys(winners).map(Number).sort((a,b)=>a-b);
+  const alive=purchased.filter(c=>decided.every(leg=>c[leg-1]===winners[leg]));
+  const undecided=LEGS.filter(leg=>!(leg in winners));
+  const nextLeg=undecided.length?undecided[0]:null;
+  const legs=published.legs.map(ld=>{
+    const winner=ld.leg in winners?winners[ld.leg]:null;
+    const counts={};
+    if(winner==null)for(const c of alive){const u=c[ld.leg-1];counts[u]=(counts[u]||0)+1}
+    const horses=ld.horses.map(h=>{
+      const count=counts[h.umaban]||0;
+      return {...h,is_winner:winner===h.umaban,count_if_winner:count,alive:winner==null?count>0:winner===h.umaban};
+    });
+    return {...ld,decided:winner!=null,winner,is_next:ld.leg===nextLeg,
+      alive_horse_count:horses.filter(h=>h.alive).length,horses};
+  });
+  return {...published,legs,surviving_points:alive.length,
+    status:alive.length<=0?'DEAD':(decided.length>=5?'COMPLETE':'ALIVE'),
+    decided_legs:decided,next_leg:nextLeg,
+    winners:Object.fromEntries(decided.map(leg=>[String(leg),winners[leg]])),
+    surviving_combinations:alive};
+}
+function survivingFormations(formations,selection){
+  return (formations||[]).map(f=>{
+    let points=1,ok=true;
+    f.legs.forEach((set,i)=>{
+      const u=selection[i+1];
+      if(u==null)points*=set.length;else if(!set.map(Number).includes(Number(u)))ok=false;
+    });
+    return ok?{...f,alive_points:points}:null;
+  }).filter(Boolean);
+}
+// survivor-core:end
+
+function publishedWinners(v){
+  const out={};for(const [leg,u] of Object.entries((v&&v.winners)||{}))if(u!=null)out[Number(leg)]=Number(u);return out;
+}
+const samePicks=(a,b)=>JSON.stringify(Object.entries(a).sort())===JSON.stringify(Object.entries(b).sort());
 
 function setMessage(text,type=''){const el=$('message');if(!text){el.classList.add('hidden');return}el.classList.remove('hidden');el.className='msg'+(type?' '+type:'');el.textContent=text}
 async function getJson(path){const r=await fetch(`${path}?t=${Date.now()}`,{cache:'no-store'});if(!r.ok)throw new Error(`データを読み込めません (${r.status})`);return r.json()}
 
 function horseCard(leg,horse,decided){
   const cls=['horse'];let pt='',sub='';
-  if(horse.is_winner){cls.push('winner');pt='✓ 勝ち馬'}
+  const official=Number((base&&base.winners||{})[String(leg)])===horse.umaban;
+  if(horse.is_winner){cls.push('winner');pt=official?'✓ 勝ち馬':'✓ 選択中'}
   else if(decided){cls.push('dead');pt=horse.in_plan?'—':'未購入'}
   else if(!horse.in_plan){cls.push('notinplan');pt='未購入'}
   else if(horse.alive){cls.push('alive');pt=`${horse.count_if_winner}点`;sub='この馬なら 残り'}
   else{cls.push('dead');pt='0点'}
-  return `<div class="${cls.join(' ')}" data-leg="${leg}" data-umaban="${horse.umaban}">
+  const tag=combos?'button':'div';
+  return `<${tag} class="${cls.join(' ')}" data-leg="${leg}" data-umaban="${horse.umaban}">
     <span class="num">${horse.umaban}</span>
     <span class="nm">${esc(horse.bamei)}<span class="sub">${horse.popularity}人気 ${Number(horse.odds).toFixed(1)}倍</span></span>
-    <span class="pt">${pt}${sub?`<small>${sub}</small>`:''}</span></div>`;
+    <span class="pt">${pt}${sub?`<small>${sub}</small>`:''}</span></${tag}>`;
 }
 const sortHorses=(horses,decided)=>[...horses].sort((a,b)=>{
   const rank=h=>h.is_winner?0:(decided?(h.in_plan?1:2):(h.alive?1:(h.in_plan?2:3)));
@@ -234,7 +305,8 @@ function raceCard(leg){
   const visible=ordered.filter(h=>h.alive);
   const others=ordered.filter(h=>!h.alive);
   const isOpen=Boolean(expandedOthers[leg.leg]);
-  const state=leg.decided?'確定':(leg.is_next?'次のレース':`生存 ${visible.length}頭`);
+  const official=leg.decided&&Number((base.winners||{})[String(leg.leg)])===Number(leg.winner);
+  const state=leg.decided?(official?'確定':'選択中'):(leg.is_next?'次のレース':`生存 ${visible.length}頭`);
   return `<section class="card race-card${leg.is_next?' is-next':''}" data-race="${leg.leg}">
     <div class="race-head"><div><div class="eyebrow">LEG ${leg.leg}</div>
       <div class="race-place">${esc(leg.venue)}${leg.rno}R</div><div class="race-name">${esc(leg.race_name||'')}</div></div>
@@ -242,6 +314,7 @@ function raceCard(leg){
     <div class="race-body"><div class="horses">${visible.map(h=>horseCard(leg.leg,h,leg.decided)).join('')||'<div class="lead">生存馬なし</div>'}</div>
       ${others.length?`<button class="other-toggle" data-others="${leg.leg}">${isOpen?'その他の馬を閉じる':`その他の馬を見る（${others.length}頭）`}</button>
         <div class="other-horses${isOpen?'':' hidden'}">${others.map(h=>horseCard(leg.leg,h,leg.decided)).join('')}</div>`:''}
+      ${leg.decided&&combos?`<button class="other-toggle" data-unpick="${leg.leg}">選択を訂正する</button>`:''}
     </div></section>`;
 }
 
@@ -252,6 +325,9 @@ function render(){
   $('alive').textContent=view.surviving_points;
   $('total').textContent=`/ ${view.purchase_points}点`;
   $('purchaseAmount').textContent=`購入額 ${Number(view.purchase_amount||0).toLocaleString()}円`;
+  const formations=run.formations||[];
+  const aliveFormations=survivingFormations(formations,picks);
+  $('formationAlive').textContent=`生存formation ${aliveFormations.length} / ${formations.length}件`;
   $('anchor').textContent=view.anchor
     ?`軸 ${view.anchor.venue}${view.anchor.rno}R ${view.anchor.umaban}番 ${view.anchor.bamei}`
     :'軸 なし';
@@ -265,6 +341,16 @@ function render(){
     return `<span class="step ${cls}">${mark}${l.rno}R</span>`;
   }).join('');
 
+  const official=publishedWinners(base);
+  const note=$('pickNote');
+  if(combos&&!samePicks(picks,official)){
+    note.classList.remove('hidden');
+    note.innerHTML=`<span>このブラウザ内の選択で絞り込み中</span>${Object.keys(official).length
+      ?'<button id="restorePicks" class="btn">入力済みの勝ち馬に戻す</button>':''}`;
+    const restore=$('restorePicks');
+    if(restore)restore.addEventListener('click',()=>{picks={...official};edited=false;expandedOthers={};update()});
+  }else{note.classList.add('hidden');note.innerHTML=''}
+
   let html='';
   if(view.status==='COMPLETE'){
     const combo=(view.surviving_combinations[0]||[]).join(' - ');
@@ -273,12 +359,15 @@ function render(){
       <p class="lead">${view.surviving_points} / ${view.purchase_points}点が的中しています。</p></section>`;
   }else if(view.status==='DEAD'){
     html+=`<section class="card hero dead-hero"><h1 class="title">WIN5終了</h1>
-      <p class="lead">残り 0 / ${view.purchase_points}点。</p></section>`;
+      <p class="lead">残り 0 / ${view.purchase_points}点。${combos?'押し間違いなら、そのレースの「選択を訂正する」から直せます。':''}</p></section>`;
   }
   html+=view.legs.map(raceCard).join('');
   $('board').innerHTML=html;
 
+  if(combos)document.querySelectorAll('#board button.horse').forEach(b=>b.addEventListener('click',()=>pick(Number(b.dataset.leg),Number(b.dataset.umaban))));
+  document.querySelectorAll('[data-unpick]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();unpick(Number(b.dataset.unpick))}));
   document.querySelectorAll('[data-others]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();const k=b.dataset.others;expandedOthers[k]=!expandedOthers[k];render()}));
+  $('clearPicks').disabled=!combos||!Object.keys(picks).length;
   $('combosCount').textContent=`${view.surviving_points}点`;
   const names={};for(const leg of view.legs)names[leg.leg]=Object.fromEntries(leg.horses.map(h=>[h.umaban,h.bamei]));
   $('combos').innerHTML=view.surviving_combinations.map(c=>showNames
@@ -293,17 +382,30 @@ function render(){
     ['予算',view.budget_yen?Number(view.budget_yen).toLocaleString()+'円':'-'],
     ['購入点数',`${view.purchase_points}点`],['購入額',`${Number(view.purchase_amount||0).toLocaleString()}円`],
     ['formation',build.formation_count!=null?`${build.formation_count}件`:'-'],['生存',`${view.surviving_points}点`],
+    ['生存formation',`${aliveFormations.length}件`],
     ['軸',view.anchor?`${view.anchor.venue}${view.anchor.rno}R ${view.anchor.umaban}番 ${view.anchor.bamei}`:'なし'],
-    ['確定レース',decided.length?decided.map(l=>`${l.venue}${l.rno}R=${l.winner}`).join(' / '):'なし'],
+    ['選択中レース',decided.length?decided.map(l=>`${l.venue}${l.rno}R=${l.winner}`).join(' / '):'なし'],
   ].map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('');
-  const formations=run.formations||[];
-  $('formationCount').textContent=`${formations.length}件 / ${view.purchase_points}点`;
+  $('formationCount').textContent=`生存 ${aliveFormations.length} / ${formations.length}件 ・ ${view.surviving_points}点`;
   $('formationHead').innerHTML=`<tr><th>#</th>${view.legs.map(l=>`<th>${esc(l.venue)}<br>${l.rno}R</th>`).join('')}<th>点</th></tr>`;
-  $('formationBody').innerHTML=formations.map(f=>`<tr><td class="id">${esc(f.formation_id)}</td>${
-    f.legs.map(u=>`<td class="leg">${u.map(Number).join(',')}</td>`).join('')}<td class="num">${esc(f.points)}</td></tr>`).join('')
+  $('formationBody').innerHTML=aliveFormations.map(f=>`<tr><td class="id">${esc(f.formation_id)}</td>${
+    f.legs.map((u,i)=>`<td class="leg">${u.map(Number).map(x=>picks[i+1]===x?`<b>${x}</b>`:x).join(',')}</td>`).join('')}<td class="num">${
+    f.alive_points===Number(f.points)?esc(f.points):`${f.alive_points}/${esc(f.points)}`}</td></tr>`).join('')
     ||'<tr><td colspan="7">なし</td></tr>';
-  $('updated').textContent=`BUILD ${String(run.snapshot_at||'').slice(0,16).replace('T',' ')} ・ 閲覧専用`;
+  $('updated').textContent=`BUILD ${String(run.snapshot_at||'').slice(0,16).replace('T',' ')} ・ 閲覧専用${combos?' ・ 馬をタップで絞り込み（このブラウザ内のみ）':''}`;
 }
+
+function update(){view=combos?computeView(base,combos,picks):base;render()}
+function pick(leg,umaban){
+  if(!combos)return;
+  if(picks[leg]===umaban)delete picks[leg];else picks[leg]=umaban;
+  edited=true;expandedOthers={};update();
+  // render() has already rebuilt the DOM synchronously, so scroll right away.
+  const next=document.querySelector('.race-card.is-next');
+  if(next)next.scrollIntoView({behavior:'smooth',block:'start'});else window.scrollTo({top:0,behavior:'smooth'});
+}
+function unpick(leg){delete picks[leg];edited=true;update()}
+function clearPicks(){picks={};edited=true;expandedOthers={};update();window.scrollTo({top:0,behavior:'smooth'})}
 
 function renderRuns(){
   $('runs').innerHTML=(index.runs||[]).map(r=>`<button class="run${r.run_id===runId?' current':''}" data-run="${esc(r.run_id)}">
@@ -316,7 +418,15 @@ function renderRuns(){
     $('picker').classList.add('hidden');expandedOthers={};setMessage('');loadRun().then(()=>window.scrollTo({top:0}));}));
 }
 async function loadRun(){
-  run=await getJson(`data/runs/${encodeURIComponent(runId)}.json`);view=run.view;render();
+  run=await getJson(`data/runs/${encodeURIComponent(runId)}.json`);base=run.view;
+  combos=expandFormations(run.formations,base.purchase_points);
+  const official=publishedWinners(base);
+  // A new run starts from the published winners; while the viewer has not tapped
+  // anything the page keeps following them, after that their own selection is kept.
+  if(pickedRun!==runId){picks=official;edited=false;pickedRun=runId;expandedOthers={}}
+  else if(!edited)picks=official;
+  if(!combos)setMessage('この開催は絞り込み用のformationデータが揃っていないため、表示のみです','error');
+  update();
 }
 async function refresh(){
   try{
@@ -345,6 +455,7 @@ function openSheet(id){$(id).classList.add('open');$('sheetBg').classList.add('o
 function closeSheets(){document.querySelectorAll('.sheet').forEach(s=>s.classList.remove('open'));$('sheetBg').classList.remove('open')}
 $('toggleCombos').addEventListener('click',()=>openSheet('combosSheet'));
 $('toggleFormations').addEventListener('click',()=>openSheet('formationSheet'));
+$('clearPicks').addEventListener('click',clearPicks);
 $('openDetail').addEventListener('click',()=>openSheet('detailSheet'));
 $('openPicker').addEventListener('click',()=>{if(index){renderRuns();$('picker').classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'})}});
 $('closePicker').addEventListener('click',()=>$('picker').classList.add('hidden'));
