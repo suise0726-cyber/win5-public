@@ -1,0 +1,3651 @@
+{
+ "build": {
+  "amount_yen": 19900,
+  "formation_count": 59,
+  "points": 199,
+  "status": "BUILD_OK",
+  "verified_at": "2026-10-24T14:30:18.987938+09:00"
+ },
+ "formations": [
+  {
+   "amount_yen": 200,
+   "formation_id": "F001",
+   "legs": [
+    [
+     2
+    ],
+    [
+     12
+    ],
+    [
+     5,
+     6
+    ],
+    [
+     11
+    ],
+    [
+     10
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 300,
+   "formation_id": "F002",
+   "legs": [
+    [
+     2
+    ],
+    [
+     12
+    ],
+    [
+     5,
+     6,
+     9
+    ],
+    [
+     11
+    ],
+    [
+     4
+    ]
+   ],
+   "points": 3
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F003",
+   "legs": [
+    [
+     2
+    ],
+    [
+     12
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     13
+    ],
+    [
+     10
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F004",
+   "legs": [
+    [
+     2
+    ],
+    [
+     12
+    ],
+    [
+     9
+    ],
+    [
+     13
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 600,
+   "formation_id": "F005",
+   "legs": [
+    [
+     2,
+     4
+    ],
+    [
+     12
+    ],
+    [
+     5,
+     6,
+     11
+    ],
+    [
+     11
+    ],
+    [
+     7
+    ]
+   ],
+   "points": 6
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F006",
+   "legs": [
+    [
+     2,
+     4
+    ],
+    [
+     12
+    ],
+    [
+     7
+    ],
+    [
+     13
+    ],
+    [
+     2
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 800,
+   "formation_id": "F007",
+   "legs": [
+    [
+     2,
+     4
+    ],
+    [
+     12
+    ],
+    [
+     7,
+     10
+    ],
+    [
+     11
+    ],
+    [
+     2,
+     10
+    ]
+   ],
+   "points": 8
+  },
+  {
+   "amount_yen": 600,
+   "formation_id": "F008",
+   "legs": [
+    [
+     2,
+     4,
+     8
+    ],
+    [
+     12
+    ],
+    [
+     10
+    ],
+    [
+     13
+    ],
+    [
+     2,
+     10
+    ]
+   ],
+   "points": 6
+  },
+  {
+   "amount_yen": 300,
+   "formation_id": "F009",
+   "legs": [
+    [
+     2,
+     4,
+     8
+    ],
+    [
+     12
+    ],
+    [
+     11
+    ],
+    [
+     13
+    ],
+    [
+     5
+    ]
+   ],
+   "points": 3
+  },
+  {
+   "amount_yen": 400,
+   "formation_id": "F010",
+   "legs": [
+    [
+     2,
+     8
+    ],
+    [
+     12
+    ],
+    [
+     6
+    ],
+    [
+     13
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "points": 4
+  },
+  {
+   "amount_yen": 300,
+   "formation_id": "F011",
+   "legs": [
+    [
+     2,
+     8,
+     10
+    ],
+    [
+     12
+    ],
+    [
+     5
+    ],
+    [
+     11
+    ],
+    [
+     2
+    ]
+   ],
+   "points": 3
+  },
+  {
+   "amount_yen": 600,
+   "formation_id": "F012",
+   "legs": [
+    [
+     2,
+     8,
+     14
+    ],
+    [
+     12
+    ],
+    [
+     5
+    ],
+    [
+     13
+    ],
+    [
+     4,
+     7
+    ]
+   ],
+   "points": 6
+  },
+  {
+   "amount_yen": 600,
+   "formation_id": "F013",
+   "legs": [
+    [
+     2,
+     8,
+     14
+    ],
+    [
+     12
+    ],
+    [
+     6,
+     11
+    ],
+    [
+     13
+    ],
+    [
+     7
+    ]
+   ],
+   "points": 6
+  },
+  {
+   "amount_yen": 600,
+   "formation_id": "F014",
+   "legs": [
+    [
+     2,
+     8,
+     14
+    ],
+    [
+     12
+    ],
+    [
+     9
+    ],
+    [
+     11
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "points": 6
+  },
+  {
+   "amount_yen": 600,
+   "formation_id": "F015",
+   "legs": [
+    [
+     2,
+     10,
+     14
+    ],
+    [
+     12
+    ],
+    [
+     6,
+     11
+    ],
+    [
+     11
+    ],
+    [
+     2
+    ]
+   ],
+   "points": 6
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F016",
+   "legs": [
+    [
+     2,
+     14
+    ],
+    [
+     12
+    ],
+    [
+     5
+    ],
+    [
+     13
+    ],
+    [
+     2
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 400,
+   "formation_id": "F017",
+   "legs": [
+    [
+     2,
+     14
+    ],
+    [
+     12
+    ],
+    [
+     11
+    ],
+    [
+     11,
+     13
+    ],
+    [
+     4
+    ]
+   ],
+   "points": 4
+  },
+  {
+   "amount_yen": 100,
+   "formation_id": "F018",
+   "legs": [
+    [
+     3
+    ],
+    [
+     12
+    ],
+    [
+     3
+    ],
+    [
+     11
+    ],
+    [
+     10
+    ]
+   ],
+   "points": 1
+  },
+  {
+   "amount_yen": 600,
+   "formation_id": "F019",
+   "legs": [
+    [
+     3
+    ],
+    [
+     12
+    ],
+    [
+     3
+    ],
+    [
+     11,
+     13
+    ],
+    [
+     2,
+     4,
+     7
+    ]
+   ],
+   "points": 6
+  },
+  {
+   "amount_yen": 400,
+   "formation_id": "F020",
+   "legs": [
+    [
+     3
+    ],
+    [
+     12
+    ],
+    [
+     5,
+     6
+    ],
+    [
+     11,
+     13
+    ],
+    [
+     9
+    ]
+   ],
+   "points": 4
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F021",
+   "legs": [
+    [
+     3
+    ],
+    [
+     12
+    ],
+    [
+     5,
+     7
+    ],
+    [
+     11
+    ],
+    [
+     5
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 400,
+   "formation_id": "F022",
+   "legs": [
+    [
+     3
+    ],
+    [
+     12
+    ],
+    [
+     5,
+     11
+    ],
+    [
+     11,
+     13
+    ],
+    [
+     6
+    ]
+   ],
+   "points": 4
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F023",
+   "legs": [
+    [
+     3
+    ],
+    [
+     12
+    ],
+    [
+     6
+    ],
+    [
+     11,
+     13
+    ],
+    [
+     5
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F024",
+   "legs": [
+    [
+     3
+    ],
+    [
+     12
+    ],
+    [
+     7
+    ],
+    [
+     13
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 100,
+   "formation_id": "F025",
+   "legs": [
+    [
+     3
+    ],
+    [
+     12
+    ],
+    [
+     10
+    ],
+    [
+     11
+    ],
+    [
+     2
+    ]
+   ],
+   "points": 1
+  },
+  {
+   "amount_yen": 100,
+   "formation_id": "F026",
+   "legs": [
+    [
+     3
+    ],
+    [
+     12
+    ],
+    [
+     11
+    ],
+    [
+     11
+    ],
+    [
+     9
+    ]
+   ],
+   "points": 1
+  },
+  {
+   "amount_yen": 800,
+   "formation_id": "F027",
+   "legs": [
+    [
+     3,
+     12
+    ],
+    [
+     12
+    ],
+    [
+     7,
+     10
+    ],
+    [
+     11
+    ],
+    [
+     4,
+     7
+    ]
+   ],
+   "points": 8
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F028",
+   "legs": [
+    [
+     3,
+     12
+    ],
+    [
+     12
+    ],
+    [
+     9
+    ],
+    [
+     11
+    ],
+    [
+     6
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 400,
+   "formation_id": "F029",
+   "legs": [
+    [
+     3,
+     12
+    ],
+    [
+     12
+    ],
+    [
+     10
+    ],
+    [
+     13
+    ],
+    [
+     4,
+     7
+    ]
+   ],
+   "points": 4
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F030",
+   "legs": [
+    [
+     4
+    ],
+    [
+     12
+    ],
+    [
+     5,
+     6
+    ],
+    [
+     13
+    ],
+    [
+     7
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F031",
+   "legs": [
+    [
+     4
+    ],
+    [
+     12
+    ],
+    [
+     6
+    ],
+    [
+     11
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F032",
+   "legs": [
+    [
+     4
+    ],
+    [
+     12
+    ],
+    [
+     9,
+     11
+    ],
+    [
+     11
+    ],
+    [
+     5
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F033",
+   "legs": [
+    [
+     4,
+     8
+    ],
+    [
+     12
+    ],
+    [
+     5
+    ],
+    [
+     11
+    ],
+    [
+     4
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F034",
+   "legs": [
+    [
+     4,
+     14
+    ],
+    [
+     12
+    ],
+    [
+     6
+    ],
+    [
+     13
+    ],
+    [
+     4
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 400,
+   "formation_id": "F035",
+   "legs": [
+    [
+     8
+    ],
+    [
+     12
+    ],
+    [
+     6,
+     10
+    ],
+    [
+     11
+    ],
+    [
+     2,
+     10
+    ]
+   ],
+   "points": 4
+  },
+  {
+   "amount_yen": 400,
+   "formation_id": "F036",
+   "legs": [
+    [
+     8
+    ],
+    [
+     12
+    ],
+    [
+     6,
+     11
+    ],
+    [
+     11
+    ],
+    [
+     4,
+     7
+    ]
+   ],
+   "points": 4
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F037",
+   "legs": [
+    [
+     8,
+     12
+    ],
+    [
+     12
+    ],
+    [
+     11
+    ],
+    [
+     11
+    ],
+    [
+     5
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 300,
+   "formation_id": "F038",
+   "legs": [
+    [
+     8,
+     12,
+     14
+    ],
+    [
+     12
+    ],
+    [
+     5
+    ],
+    [
+     11
+    ],
+    [
+     7
+    ]
+   ],
+   "points": 3
+  },
+  {
+   "amount_yen": 800,
+   "formation_id": "F039",
+   "legs": [
+    [
+     8,
+     14
+    ],
+    [
+     12
+    ],
+    [
+     7
+    ],
+    [
+     11,
+     13
+    ],
+    [
+     2,
+     10
+    ]
+   ],
+   "points": 8
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F040",
+   "legs": [
+    [
+     8,
+     14
+    ],
+    [
+     12
+    ],
+    [
+     9
+    ],
+    [
+     13
+    ],
+    [
+     5
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F041",
+   "legs": [
+    [
+     10
+    ],
+    [
+     12
+    ],
+    [
+     5,
+     9
+    ],
+    [
+     13
+    ],
+    [
+     2
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 400,
+   "formation_id": "F042",
+   "legs": [
+    [
+     10
+    ],
+    [
+     12
+    ],
+    [
+     9
+    ],
+    [
+     11
+    ],
+    [
+     2,
+     4,
+     7,
+     10
+    ]
+   ],
+   "points": 4
+  },
+  {
+   "amount_yen": 400,
+   "formation_id": "F043",
+   "legs": [
+    [
+     10
+    ],
+    [
+     12
+    ],
+    [
+     11
+    ],
+    [
+     11,
+     13
+    ],
+    [
+     4,
+     10
+    ]
+   ],
+   "points": 4
+  },
+  {
+   "amount_yen": 800,
+   "formation_id": "F044",
+   "legs": [
+    [
+     10,
+     14
+    ],
+    [
+     12
+    ],
+    [
+     5,
+     6
+    ],
+    [
+     11,
+     13
+    ],
+    [
+     10
+    ]
+   ],
+   "points": 8
+  },
+  {
+   "amount_yen": 400,
+   "formation_id": "F045",
+   "legs": [
+    [
+     10,
+     14
+    ],
+    [
+     12
+    ],
+    [
+     6,
+     11
+    ],
+    [
+     13
+    ],
+    [
+     2
+    ]
+   ],
+   "points": 4
+  },
+  {
+   "amount_yen": 400,
+   "formation_id": "F046",
+   "legs": [
+    [
+     10,
+     14
+    ],
+    [
+     12
+    ],
+    [
+     9
+    ],
+    [
+     13
+    ],
+    [
+     4,
+     7
+    ]
+   ],
+   "points": 4
+  },
+  {
+   "amount_yen": 600,
+   "formation_id": "F047",
+   "legs": [
+    [
+     12
+    ],
+    [
+     12
+    ],
+    [
+     3
+    ],
+    [
+     11,
+     13
+    ],
+    [
+     2,
+     4,
+     10
+    ]
+   ],
+   "points": 6
+  },
+  {
+   "amount_yen": 400,
+   "formation_id": "F048",
+   "legs": [
+    [
+     12
+    ],
+    [
+     12
+    ],
+    [
+     5,
+     6
+    ],
+    [
+     11,
+     13
+    ],
+    [
+     5
+    ]
+   ],
+   "points": 4
+  },
+  {
+   "amount_yen": 300,
+   "formation_id": "F049",
+   "legs": [
+    [
+     12
+    ],
+    [
+     12
+    ],
+    [
+     5,
+     9,
+     11
+    ],
+    [
+     11
+    ],
+    [
+     9
+    ]
+   ],
+   "points": 3
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F050",
+   "legs": [
+    [
+     12
+    ],
+    [
+     12
+    ],
+    [
+     5,
+     11
+    ],
+    [
+     13
+    ],
+    [
+     9
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F051",
+   "legs": [
+    [
+     12
+    ],
+    [
+     12
+    ],
+    [
+     6
+    ],
+    [
+     11,
+     13
+    ],
+    [
+     7
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F052",
+   "legs": [
+    [
+     12
+    ],
+    [
+     12
+    ],
+    [
+     7
+    ],
+    [
+     13
+    ],
+    [
+     4,
+     7
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F053",
+   "legs": [
+    [
+     12
+    ],
+    [
+     12
+    ],
+    [
+     7,
+     10
+    ],
+    [
+     11
+    ],
+    [
+     2
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 100,
+   "formation_id": "F054",
+   "legs": [
+    [
+     12
+    ],
+    [
+     12
+    ],
+    [
+     9
+    ],
+    [
+     13
+    ],
+    [
+     6
+    ]
+   ],
+   "points": 1
+  },
+  {
+   "amount_yen": 100,
+   "formation_id": "F055",
+   "legs": [
+    [
+     12
+    ],
+    [
+     12
+    ],
+    [
+     10
+    ],
+    [
+     11
+    ],
+    [
+     10
+    ]
+   ],
+   "points": 1
+  },
+  {
+   "amount_yen": 100,
+   "formation_id": "F056",
+   "legs": [
+    [
+     12
+    ],
+    [
+     12
+    ],
+    [
+     10
+    ],
+    [
+     13
+    ],
+    [
+     2
+    ]
+   ],
+   "points": 1
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F057",
+   "legs": [
+    [
+     12,
+     14
+    ],
+    [
+     12
+    ],
+    [
+     6
+    ],
+    [
+     11
+    ],
+    [
+     4
+    ]
+   ],
+   "points": 2
+  },
+  {
+   "amount_yen": 400,
+   "formation_id": "F058",
+   "legs": [
+    [
+     14
+    ],
+    [
+     12
+    ],
+    [
+     5,
+     9
+    ],
+    [
+     11
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "points": 4
+  },
+  {
+   "amount_yen": 200,
+   "formation_id": "F059",
+   "legs": [
+    [
+     14
+    ],
+    [
+     12
+    ],
+    [
+     11
+    ],
+    [
+     11
+    ],
+    [
+     7,
+     10
+    ]
+   ],
+   "points": 2
+  }
+ ],
+ "preset_description": "13-17 / proxy100-300万 / CAP7 / 市場最強1頭軸 / 2万円",
+ "races": [
+  {
+   "leg": 1,
+   "race_name": "長岡京ステークス 3歳以上3勝クラス（混合）（特指）",
+   "rno": 10,
+   "venue": "京都"
+  },
+  {
+   "leg": 2,
+   "race_name": "日本農業新聞杯 3歳以上3勝クラス（混合）［指定］",
+   "rno": 10,
+   "venue": "東京"
+  },
+  {
+   "leg": 3,
+   "race_name": "魚沼ステークス 3歳以上3勝クラス（混合）（特指）",
+   "rno": 11,
+   "venue": "新潟"
+  },
+  {
+   "leg": 4,
+   "race_name": "カシオペアステークス 3歳以上オープン（国際）（特指）",
+   "rno": 11,
+   "venue": "京都"
+  },
+  {
+   "leg": 5,
+   "race_name": "アルテミスステークス 2歳オープン（国際）牝（指定）",
+   "rno": 11,
+   "venue": "東京"
+  }
+ ],
+ "run_id": "20261024T143000+0900_7cd0ffc1f478",
+ "run_mode": "SHADOW",
+ "run_mode_label": "SHADOW（記録のみ）",
+ "schema_version": "WIN5_PUBLIC_SURVIVOR_V1",
+ "snapshot_at": "2026-10-24T14:30:00.819000+09:00",
+ "target_date": "2026-10-24",
+ "view": {
+  "anchor": {
+   "bamei": "サムシャイン",
+   "leg": 2,
+   "rno": 10,
+   "umaban": 12,
+   "venue": "東京"
+  },
+  "budget_yen": 20000,
+  "decided_legs": [],
+  "legs": [
+   {
+    "alive_horse_count": 7,
+    "decided": false,
+    "field_size": 15,
+    "horses": [
+     {
+      "alive": true,
+      "bamei": "スカイハイ",
+      "count_if_winner": 21,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 3.3,
+      "popularity": 1,
+      "umaban": 10
+     },
+     {
+      "alive": true,
+      "bamei": "ガンマジーティーピ",
+      "count_if_winner": 33,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 5.7,
+      "popularity": 2,
+      "umaban": 14
+     },
+     {
+      "alive": true,
+      "bamei": "アスミル",
+      "count_if_winner": 34,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 6.5,
+      "popularity": 3,
+      "umaban": 2
+     },
+     {
+      "alive": true,
+      "bamei": "アンダースコア",
+      "count_if_winner": 28,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 6.6,
+      "popularity": 4,
+      "umaban": 8
+     },
+     {
+      "alive": true,
+      "bamei": "サンタンカ",
+      "count_if_winner": 19,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 6.7,
+      "popularity": 5,
+      "umaban": 4
+     },
+     {
+      "alive": true,
+      "bamei": "モーデン",
+      "count_if_winner": 34,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 11.5,
+      "popularity": 6,
+      "umaban": 12
+     },
+     {
+      "alive": true,
+      "bamei": "ヨウシタンレイ",
+      "count_if_winner": 30,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 15.7,
+      "popularity": 7,
+      "umaban": 3
+     },
+     {
+      "alive": false,
+      "bamei": "アンビバレント",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 22.2,
+      "popularity": 8,
+      "umaban": 1
+     },
+     {
+      "alive": false,
+      "bamei": "ユハンヌス",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 28.6,
+      "popularity": 9,
+      "umaban": 13
+     },
+     {
+      "alive": false,
+      "bamei": "ハンデンドレイク",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 42.7,
+      "popularity": 10,
+      "umaban": 9
+     },
+     {
+      "alive": false,
+      "bamei": "フライングブレード",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 50.8,
+      "popularity": 11,
+      "umaban": 15
+     },
+     {
+      "alive": false,
+      "bamei": "エイムフォーエース",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 51.3,
+      "popularity": 12,
+      "umaban": 5
+     },
+     {
+      "alive": false,
+      "bamei": "トーホウディアス",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 63.0,
+      "popularity": 13,
+      "umaban": 11
+     },
+     {
+      "alive": false,
+      "bamei": "ウィルオレオール",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 73.5,
+      "popularity": 14,
+      "umaban": 7
+     },
+     {
+      "alive": false,
+      "bamei": "コスモアディラート",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 105.2,
+      "popularity": 15,
+      "umaban": 6
+     }
+    ],
+    "is_next": true,
+    "leg": 1,
+    "race_id16": "2026102408040810",
+    "race_name": "長岡京ステークス 3歳以上3勝クラス（混合）（特指）",
+    "rno": 10,
+    "venue": "京都",
+    "winner": null
+   },
+   {
+    "alive_horse_count": 1,
+    "decided": false,
+    "field_size": 16,
+    "horses": [
+     {
+      "alive": true,
+      "bamei": "サムシャイン",
+      "count_if_winner": 199,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 2.5,
+      "popularity": 1,
+      "umaban": 12
+     },
+     {
+      "alive": false,
+      "bamei": "ロカヒ",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 5.9,
+      "popularity": 2,
+      "umaban": 14
+     },
+     {
+      "alive": false,
+      "bamei": "サノノワンダー",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 9.3,
+      "popularity": 3,
+      "umaban": 13
+     },
+     {
+      "alive": false,
+      "bamei": "ジェイエルマスター",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 11.5,
+      "popularity": 4,
+      "umaban": 7
+     },
+     {
+      "alive": false,
+      "bamei": "リフレックス",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 12.1,
+      "popularity": 5,
+      "umaban": 10
+     },
+     {
+      "alive": false,
+      "bamei": "デコラシオン",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 13.6,
+      "popularity": 6,
+      "umaban": 9
+     },
+     {
+      "alive": false,
+      "bamei": "リバートゥルー",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 16.4,
+      "popularity": 7,
+      "umaban": 4
+     },
+     {
+      "alive": false,
+      "bamei": "ダンツファイター",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 17.8,
+      "popularity": 8,
+      "umaban": 5
+     },
+     {
+      "alive": false,
+      "bamei": "テリフィックプラン",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 20.9,
+      "popularity": 9,
+      "umaban": 6
+     },
+     {
+      "alive": false,
+      "bamei": "ラッキーキッド",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 22.2,
+      "popularity": 10,
+      "umaban": 3
+     },
+     {
+      "alive": false,
+      "bamei": "トルショー",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 34.4,
+      "popularity": 11,
+      "umaban": 1
+     },
+     {
+      "alive": false,
+      "bamei": "アデランテ",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 40.9,
+      "popularity": 12,
+      "umaban": 8
+     },
+     {
+      "alive": false,
+      "bamei": "ワイドクリーガー",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 42.9,
+      "popularity": 13,
+      "umaban": 11
+     },
+     {
+      "alive": false,
+      "bamei": "ルシフェル",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 44.8,
+      "popularity": 14,
+      "umaban": 2
+     },
+     {
+      "alive": false,
+      "bamei": "パフ",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 50.4,
+      "popularity": 15,
+      "umaban": 16
+     },
+     {
+      "alive": false,
+      "bamei": "パルデンス",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 121.1,
+      "popularity": 16,
+      "umaban": 15
+     }
+    ],
+    "is_next": false,
+    "leg": 2,
+    "race_id16": "2026102405040810",
+    "race_name": "日本農業新聞杯 3歳以上3勝クラス（混合）［指定］",
+    "rno": 10,
+    "venue": "東京",
+    "winner": null
+   },
+   {
+    "alive_horse_count": 7,
+    "decided": false,
+    "field_size": 12,
+    "horses": [
+     {
+      "alive": true,
+      "bamei": "ユキワリザクラ",
+      "count_if_winner": 13,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 3.5,
+      "popularity": 1,
+      "umaban": 3
+     },
+     {
+      "alive": true,
+      "bamei": "ミュージシャン",
+      "count_if_winner": 24,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 4.4,
+      "popularity": 2,
+      "umaban": 10
+     },
+     {
+      "alive": true,
+      "bamei": "フクノブルーレイク",
+      "count_if_winner": 25,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 5.5,
+      "popularity": 3,
+      "umaban": 7
+     },
+     {
+      "alive": true,
+      "bamei": "フィオレストラーダ",
+      "count_if_winner": 40,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 8.9,
+      "popularity": 4,
+      "umaban": 6
+     },
+     {
+      "alive": true,
+      "bamei": "アラタマフェーヴル",
+      "count_if_winner": 37,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 10.9,
+      "popularity": 5,
+      "umaban": 5
+     },
+     {
+      "alive": true,
+      "bamei": "マイネルフーガ",
+      "count_if_winner": 33,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 11.8,
+      "popularity": 6,
+      "umaban": 11
+     },
+     {
+      "alive": true,
+      "bamei": "ハニーコム",
+      "count_if_winner": 27,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 14.4,
+      "popularity": 7,
+      "umaban": 9
+     },
+     {
+      "alive": false,
+      "bamei": "ドラゴンヘッド",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 15.2,
+      "popularity": 8,
+      "umaban": 12
+     },
+     {
+      "alive": false,
+      "bamei": "マイネルブリックス",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 19.4,
+      "popularity": 9,
+      "umaban": 2
+     },
+     {
+      "alive": false,
+      "bamei": "タイキラフター",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 20.8,
+      "popularity": 10,
+      "umaban": 1
+     },
+     {
+      "alive": false,
+      "bamei": "シンゼンカガ",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 41.7,
+      "popularity": 11,
+      "umaban": 8
+     },
+     {
+      "alive": false,
+      "bamei": "ワイドアラジン",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 52.1,
+      "popularity": 12,
+      "umaban": 4
+     }
+    ],
+    "is_next": false,
+    "leg": 3,
+    "race_id16": "2026102404040311",
+    "race_name": "魚沼ステークス 3歳以上3勝クラス（混合）（特指）",
+    "rno": 11,
+    "venue": "新潟",
+    "winner": null
+   },
+   {
+    "alive_horse_count": 2,
+    "decided": false,
+    "field_size": 16,
+    "horses": [
+     {
+      "alive": true,
+      "bamei": "ジーティーアダマン",
+      "count_if_winner": 112,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 3.9,
+      "popularity": 1,
+      "umaban": 11
+     },
+     {
+      "alive": true,
+      "bamei": "ガイアメンテ",
+      "count_if_winner": 87,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 4.0,
+      "popularity": 2,
+      "umaban": 13
+     },
+     {
+      "alive": false,
+      "bamei": "ディールメーカー",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 10.0,
+      "popularity": 3,
+      "umaban": 12
+     },
+     {
+      "alive": false,
+      "bamei": "コルレオニス",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 11.2,
+      "popularity": 4,
+      "umaban": 3
+     },
+     {
+      "alive": false,
+      "bamei": "サブマリーナ",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 11.9,
+      "popularity": 5,
+      "umaban": 14
+     },
+     {
+      "alive": false,
+      "bamei": "タガノエルピーダ",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 13.6,
+      "popularity": 6,
+      "umaban": 15
+     },
+     {
+      "alive": false,
+      "bamei": "レディーヴァリュー",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 13.7,
+      "popularity": 7,
+      "umaban": 16
+     },
+     {
+      "alive": false,
+      "bamei": "オーロラエックス",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 15.2,
+      "popularity": 8,
+      "umaban": 1
+     },
+     {
+      "alive": false,
+      "bamei": "ナムラエイハブ",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 17.4,
+      "popularity": 9,
+      "umaban": 4
+     },
+     {
+      "alive": false,
+      "bamei": "ゼンダンハヤブサ",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 18.3,
+      "popularity": 10,
+      "umaban": 6
+     },
+     {
+      "alive": false,
+      "bamei": "オールナット",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 27.2,
+      "popularity": 11,
+      "umaban": 10
+     },
+     {
+      "alive": false,
+      "bamei": "アスクカムオンモア",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 32.1,
+      "popularity": 12,
+      "umaban": 7
+     },
+     {
+      "alive": false,
+      "bamei": "エラトー",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 38.3,
+      "popularity": 13,
+      "umaban": 5
+     },
+     {
+      "alive": false,
+      "bamei": "バレエマスター",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 42.0,
+      "popularity": 14,
+      "umaban": 2
+     },
+     {
+      "alive": false,
+      "bamei": "アスクドゥポルテ",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 44.4,
+      "popularity": 15,
+      "umaban": 8
+     },
+     {
+      "alive": false,
+      "bamei": "アンリーロード",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 56.5,
+      "popularity": 16,
+      "umaban": 9
+     }
+    ],
+    "is_next": false,
+    "leg": 4,
+    "race_id16": "2026102408040811",
+    "race_name": "カシオペアステークス 3歳以上オープン（国際）（特指）",
+    "rno": 11,
+    "venue": "京都",
+    "winner": null
+   },
+   {
+    "alive_horse_count": 7,
+    "decided": false,
+    "field_size": 13,
+    "horses": [
+     {
+      "alive": true,
+      "bamei": "リスグロワール",
+      "count_if_winner": 7,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 3.0,
+      "popularity": 1,
+      "umaban": 6
+     },
+     {
+      "alive": true,
+      "bamei": "プルヴィナル",
+      "count_if_winner": 10,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 3.7,
+      "popularity": 2,
+      "umaban": 9
+     },
+     {
+      "alive": true,
+      "bamei": "シティオブドリーム",
+      "count_if_winner": 22,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 5.9,
+      "popularity": 3,
+      "umaban": 5
+     },
+     {
+      "alive": true,
+      "bamei": "ホウオウプレマ",
+      "count_if_winner": 42,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 10.2,
+      "popularity": 4,
+      "umaban": 7
+     },
+     {
+      "alive": true,
+      "bamei": "ピコベリー",
+      "count_if_winner": 39,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 11.9,
+      "popularity": 5,
+      "umaban": 4
+     },
+     {
+      "alive": true,
+      "bamei": "マリアンデール",
+      "count_if_winner": 46,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 16.1,
+      "popularity": 6,
+      "umaban": 2
+     },
+     {
+      "alive": true,
+      "bamei": "ジーティーキャリー",
+      "count_if_winner": 33,
+      "in_plan": true,
+      "is_winner": false,
+      "odds": 16.8,
+      "popularity": 7,
+      "umaban": 10
+     },
+     {
+      "alive": false,
+      "bamei": "ファミーリエ",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 18.5,
+      "popularity": 8,
+      "umaban": 3
+     },
+     {
+      "alive": false,
+      "bamei": "ローズサルーテ",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 20.7,
+      "popularity": 9,
+      "umaban": 13
+     },
+     {
+      "alive": false,
+      "bamei": "サトノスプレマシー",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 32.2,
+      "popularity": 10,
+      "umaban": 12
+     },
+     {
+      "alive": false,
+      "bamei": "カナデルペガサス",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 35.3,
+      "popularity": 11,
+      "umaban": 11
+     },
+     {
+      "alive": false,
+      "bamei": "タプティ",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 38.9,
+      "popularity": 12,
+      "umaban": 1
+     },
+     {
+      "alive": false,
+      "bamei": "ベストプラージュ",
+      "count_if_winner": 0,
+      "in_plan": false,
+      "is_winner": false,
+      "odds": 137.1,
+      "popularity": 13,
+      "umaban": 8
+     }
+    ],
+    "is_next": false,
+    "leg": 5,
+    "race_id16": "2026102405040811",
+    "race_name": "アルテミスステークス 2歳オープン（国際）牝（指定）",
+    "rno": 11,
+    "venue": "東京",
+    "winner": null
+   }
+  ],
+  "next_leg": 1,
+  "preset_name": "13-17帯 市場最強1頭軸",
+  "purchase_amount": 19900,
+  "purchase_points": 199,
+  "run_id": "20261024T143000+0900_7cd0ffc1f478",
+  "status": "ALIVE",
+  "surviving_combinations": [
+   [
+    10,
+    12,
+    6,
+    11,
+    2
+   ],
+   [
+    10,
+    12,
+    6,
+    11,
+    10
+   ],
+   [
+    10,
+    12,
+    6,
+    13,
+    2
+   ],
+   [
+    10,
+    12,
+    6,
+    13,
+    10
+   ],
+   [
+    10,
+    12,
+    5,
+    11,
+    2
+   ],
+   [
+    10,
+    12,
+    5,
+    11,
+    10
+   ],
+   [
+    10,
+    12,
+    5,
+    13,
+    2
+   ],
+   [
+    10,
+    12,
+    5,
+    13,
+    10
+   ],
+   [
+    10,
+    12,
+    11,
+    11,
+    4
+   ],
+   [
+    10,
+    12,
+    11,
+    11,
+    2
+   ],
+   [
+    10,
+    12,
+    11,
+    11,
+    10
+   ],
+   [
+    10,
+    12,
+    11,
+    13,
+    4
+   ],
+   [
+    10,
+    12,
+    11,
+    13,
+    2
+   ],
+   [
+    10,
+    12,
+    11,
+    13,
+    10
+   ],
+   [
+    10,
+    12,
+    9,
+    11,
+    7
+   ],
+   [
+    10,
+    12,
+    9,
+    11,
+    4
+   ],
+   [
+    10,
+    12,
+    9,
+    11,
+    2
+   ],
+   [
+    10,
+    12,
+    9,
+    11,
+    10
+   ],
+   [
+    10,
+    12,
+    9,
+    13,
+    7
+   ],
+   [
+    10,
+    12,
+    9,
+    13,
+    4
+   ],
+   [
+    10,
+    12,
+    9,
+    13,
+    2
+   ],
+   [
+    14,
+    12,
+    7,
+    11,
+    2
+   ],
+   [
+    14,
+    12,
+    7,
+    11,
+    10
+   ],
+   [
+    14,
+    12,
+    7,
+    13,
+    2
+   ],
+   [
+    14,
+    12,
+    7,
+    13,
+    10
+   ],
+   [
+    14,
+    12,
+    6,
+    11,
+    4
+   ],
+   [
+    14,
+    12,
+    6,
+    11,
+    2
+   ],
+   [
+    14,
+    12,
+    6,
+    11,
+    10
+   ],
+   [
+    14,
+    12,
+    6,
+    13,
+    7
+   ],
+   [
+    14,
+    12,
+    6,
+    13,
+    4
+   ],
+   [
+    14,
+    12,
+    6,
+    13,
+    2
+   ],
+   [
+    14,
+    12,
+    6,
+    13,
+    10
+   ],
+   [
+    14,
+    12,
+    5,
+    11,
+    7
+   ],
+   [
+    14,
+    12,
+    5,
+    11,
+    4
+   ],
+   [
+    14,
+    12,
+    5,
+    11,
+    2
+   ],
+   [
+    14,
+    12,
+    5,
+    11,
+    10
+   ],
+   [
+    14,
+    12,
+    5,
+    13,
+    7
+   ],
+   [
+    14,
+    12,
+    5,
+    13,
+    4
+   ],
+   [
+    14,
+    12,
+    5,
+    13,
+    2
+   ],
+   [
+    14,
+    12,
+    5,
+    13,
+    10
+   ],
+   [
+    14,
+    12,
+    11,
+    11,
+    7
+   ],
+   [
+    14,
+    12,
+    11,
+    11,
+    4
+   ],
+   [
+    14,
+    12,
+    11,
+    11,
+    2
+   ],
+   [
+    14,
+    12,
+    11,
+    11,
+    10
+   ],
+   [
+    14,
+    12,
+    11,
+    13,
+    7
+   ],
+   [
+    14,
+    12,
+    11,
+    13,
+    4
+   ],
+   [
+    14,
+    12,
+    11,
+    13,
+    2
+   ],
+   [
+    14,
+    12,
+    9,
+    11,
+    5
+   ],
+   [
+    14,
+    12,
+    9,
+    11,
+    7
+   ],
+   [
+    14,
+    12,
+    9,
+    11,
+    4
+   ],
+   [
+    14,
+    12,
+    9,
+    11,
+    2
+   ],
+   [
+    14,
+    12,
+    9,
+    13,
+    5
+   ],
+   [
+    14,
+    12,
+    9,
+    13,
+    7
+   ],
+   [
+    14,
+    12,
+    9,
+    13,
+    4
+   ],
+   [
+    2,
+    12,
+    10,
+    11,
+    2
+   ],
+   [
+    2,
+    12,
+    10,
+    11,
+    10
+   ],
+   [
+    2,
+    12,
+    10,
+    13,
+    2
+   ],
+   [
+    2,
+    12,
+    10,
+    13,
+    10
+   ],
+   [
+    2,
+    12,
+    7,
+    11,
+    2
+   ],
+   [
+    2,
+    12,
+    7,
+    11,
+    10
+   ],
+   [
+    2,
+    12,
+    7,
+    13,
+    2
+   ],
+   [
+    2,
+    12,
+    7,
+    13,
+    10
+   ],
+   [
+    2,
+    12,
+    6,
+    11,
+    7
+   ],
+   [
+    2,
+    12,
+    6,
+    11,
+    4
+   ],
+   [
+    2,
+    12,
+    6,
+    11,
+    2
+   ],
+   [
+    2,
+    12,
+    6,
+    11,
+    10
+   ],
+   [
+    2,
+    12,
+    6,
+    13,
+    7
+   ],
+   [
+    2,
+    12,
+    6,
+    13,
+    4
+   ],
+   [
+    2,
+    12,
+    6,
+    13,
+    2
+   ],
+   [
+    2,
+    12,
+    6,
+    13,
+    10
+   ],
+   [
+    2,
+    12,
+    5,
+    11,
+    7
+   ],
+   [
+    2,
+    12,
+    5,
+    11,
+    4
+   ],
+   [
+    2,
+    12,
+    5,
+    11,
+    2
+   ],
+   [
+    2,
+    12,
+    5,
+    11,
+    10
+   ],
+   [
+    2,
+    12,
+    5,
+    13,
+    7
+   ],
+   [
+    2,
+    12,
+    5,
+    13,
+    4
+   ],
+   [
+    2,
+    12,
+    5,
+    13,
+    2
+   ],
+   [
+    2,
+    12,
+    11,
+    11,
+    7
+   ],
+   [
+    2,
+    12,
+    11,
+    11,
+    4
+   ],
+   [
+    2,
+    12,
+    11,
+    11,
+    2
+   ],
+   [
+    2,
+    12,
+    11,
+    13,
+    5
+   ],
+   [
+    2,
+    12,
+    11,
+    13,
+    7
+   ],
+   [
+    2,
+    12,
+    11,
+    13,
+    4
+   ],
+   [
+    2,
+    12,
+    9,
+    11,
+    5
+   ],
+   [
+    2,
+    12,
+    9,
+    11,
+    7
+   ],
+   [
+    2,
+    12,
+    9,
+    11,
+    4
+   ],
+   [
+    2,
+    12,
+    9,
+    13,
+    5
+   ],
+   [
+    2,
+    12,
+    9,
+    13,
+    7
+   ],
+   [
+    8,
+    12,
+    10,
+    11,
+    2
+   ],
+   [
+    8,
+    12,
+    10,
+    11,
+    10
+   ],
+   [
+    8,
+    12,
+    10,
+    13,
+    2
+   ],
+   [
+    8,
+    12,
+    10,
+    13,
+    10
+   ],
+   [
+    8,
+    12,
+    7,
+    11,
+    2
+   ],
+   [
+    8,
+    12,
+    7,
+    11,
+    10
+   ],
+   [
+    8,
+    12,
+    7,
+    13,
+    2
+   ],
+   [
+    8,
+    12,
+    7,
+    13,
+    10
+   ],
+   [
+    8,
+    12,
+    6,
+    11,
+    7
+   ],
+   [
+    8,
+    12,
+    6,
+    11,
+    4
+   ],
+   [
+    8,
+    12,
+    6,
+    11,
+    2
+   ],
+   [
+    8,
+    12,
+    6,
+    11,
+    10
+   ],
+   [
+    8,
+    12,
+    6,
+    13,
+    7
+   ],
+   [
+    8,
+    12,
+    6,
+    13,
+    4
+   ],
+   [
+    8,
+    12,
+    6,
+    13,
+    2
+   ],
+   [
+    8,
+    12,
+    5,
+    11,
+    7
+   ],
+   [
+    8,
+    12,
+    5,
+    11,
+    4
+   ],
+   [
+    8,
+    12,
+    5,
+    11,
+    2
+   ],
+   [
+    8,
+    12,
+    5,
+    13,
+    7
+   ],
+   [
+    8,
+    12,
+    5,
+    13,
+    4
+   ],
+   [
+    8,
+    12,
+    11,
+    11,
+    5
+   ],
+   [
+    8,
+    12,
+    11,
+    11,
+    7
+   ],
+   [
+    8,
+    12,
+    11,
+    11,
+    4
+   ],
+   [
+    8,
+    12,
+    11,
+    13,
+    5
+   ],
+   [
+    8,
+    12,
+    11,
+    13,
+    7
+   ],
+   [
+    8,
+    12,
+    9,
+    11,
+    5
+   ],
+   [
+    8,
+    12,
+    9,
+    11,
+    7
+   ],
+   [
+    8,
+    12,
+    9,
+    13,
+    5
+   ],
+   [
+    4,
+    12,
+    10,
+    11,
+    2
+   ],
+   [
+    4,
+    12,
+    10,
+    11,
+    10
+   ],
+   [
+    4,
+    12,
+    10,
+    13,
+    2
+   ],
+   [
+    4,
+    12,
+    10,
+    13,
+    10
+   ],
+   [
+    4,
+    12,
+    7,
+    11,
+    2
+   ],
+   [
+    4,
+    12,
+    7,
+    11,
+    10
+   ],
+   [
+    4,
+    12,
+    7,
+    13,
+    2
+   ],
+   [
+    4,
+    12,
+    6,
+    11,
+    7
+   ],
+   [
+    4,
+    12,
+    6,
+    11,
+    4
+   ],
+   [
+    4,
+    12,
+    6,
+    11,
+    2
+   ],
+   [
+    4,
+    12,
+    6,
+    13,
+    7
+   ],
+   [
+    4,
+    12,
+    6,
+    13,
+    4
+   ],
+   [
+    4,
+    12,
+    5,
+    11,
+    7
+   ],
+   [
+    4,
+    12,
+    5,
+    11,
+    4
+   ],
+   [
+    4,
+    12,
+    5,
+    13,
+    7
+   ],
+   [
+    4,
+    12,
+    11,
+    11,
+    5
+   ],
+   [
+    4,
+    12,
+    11,
+    11,
+    7
+   ],
+   [
+    4,
+    12,
+    11,
+    13,
+    5
+   ],
+   [
+    4,
+    12,
+    9,
+    11,
+    5
+   ],
+   [
+    12,
+    12,
+    3,
+    11,
+    4
+   ],
+   [
+    12,
+    12,
+    3,
+    11,
+    2
+   ],
+   [
+    12,
+    12,
+    3,
+    11,
+    10
+   ],
+   [
+    12,
+    12,
+    3,
+    13,
+    4
+   ],
+   [
+    12,
+    12,
+    3,
+    13,
+    2
+   ],
+   [
+    12,
+    12,
+    3,
+    13,
+    10
+   ],
+   [
+    12,
+    12,
+    10,
+    11,
+    7
+   ],
+   [
+    12,
+    12,
+    10,
+    11,
+    4
+   ],
+   [
+    12,
+    12,
+    10,
+    11,
+    2
+   ],
+   [
+    12,
+    12,
+    10,
+    11,
+    10
+   ],
+   [
+    12,
+    12,
+    10,
+    13,
+    7
+   ],
+   [
+    12,
+    12,
+    10,
+    13,
+    4
+   ],
+   [
+    12,
+    12,
+    10,
+    13,
+    2
+   ],
+   [
+    12,
+    12,
+    7,
+    11,
+    7
+   ],
+   [
+    12,
+    12,
+    7,
+    11,
+    4
+   ],
+   [
+    12,
+    12,
+    7,
+    11,
+    2
+   ],
+   [
+    12,
+    12,
+    7,
+    13,
+    7
+   ],
+   [
+    12,
+    12,
+    7,
+    13,
+    4
+   ],
+   [
+    12,
+    12,
+    6,
+    11,
+    5
+   ],
+   [
+    12,
+    12,
+    6,
+    11,
+    7
+   ],
+   [
+    12,
+    12,
+    6,
+    11,
+    4
+   ],
+   [
+    12,
+    12,
+    6,
+    13,
+    5
+   ],
+   [
+    12,
+    12,
+    6,
+    13,
+    7
+   ],
+   [
+    12,
+    12,
+    5,
+    11,
+    9
+   ],
+   [
+    12,
+    12,
+    5,
+    11,
+    5
+   ],
+   [
+    12,
+    12,
+    5,
+    11,
+    7
+   ],
+   [
+    12,
+    12,
+    5,
+    13,
+    9
+   ],
+   [
+    12,
+    12,
+    5,
+    13,
+    5
+   ],
+   [
+    12,
+    12,
+    11,
+    11,
+    9
+   ],
+   [
+    12,
+    12,
+    11,
+    11,
+    5
+   ],
+   [
+    12,
+    12,
+    11,
+    13,
+    9
+   ],
+   [
+    12,
+    12,
+    9,
+    11,
+    6
+   ],
+   [
+    12,
+    12,
+    9,
+    11,
+    9
+   ],
+   [
+    12,
+    12,
+    9,
+    13,
+    6
+   ],
+   [
+    3,
+    12,
+    3,
+    11,
+    7
+   ],
+   [
+    3,
+    12,
+    3,
+    11,
+    4
+   ],
+   [
+    3,
+    12,
+    3,
+    11,
+    2
+   ],
+   [
+    3,
+    12,
+    3,
+    11,
+    10
+   ],
+   [
+    3,
+    12,
+    3,
+    13,
+    7
+   ],
+   [
+    3,
+    12,
+    3,
+    13,
+    4
+   ],
+   [
+    3,
+    12,
+    3,
+    13,
+    2
+   ],
+   [
+    3,
+    12,
+    10,
+    11,
+    7
+   ],
+   [
+    3,
+    12,
+    10,
+    11,
+    4
+   ],
+   [
+    3,
+    12,
+    10,
+    11,
+    2
+   ],
+   [
+    3,
+    12,
+    10,
+    13,
+    7
+   ],
+   [
+    3,
+    12,
+    10,
+    13,
+    4
+   ],
+   [
+    3,
+    12,
+    7,
+    11,
+    5
+   ],
+   [
+    3,
+    12,
+    7,
+    11,
+    7
+   ],
+   [
+    3,
+    12,
+    7,
+    11,
+    4
+   ],
+   [
+    3,
+    12,
+    7,
+    13,
+    5
+   ],
+   [
+    3,
+    12,
+    7,
+    13,
+    7
+   ],
+   [
+    3,
+    12,
+    6,
+    11,
+    9
+   ],
+   [
+    3,
+    12,
+    6,
+    11,
+    5
+   ],
+   [
+    3,
+    12,
+    6,
+    13,
+    9
+   ],
+   [
+    3,
+    12,
+    6,
+    13,
+    5
+   ],
+   [
+    3,
+    12,
+    5,
+    11,
+    6
+   ],
+   [
+    3,
+    12,
+    5,
+    11,
+    9
+   ],
+   [
+    3,
+    12,
+    5,
+    11,
+    5
+   ],
+   [
+    3,
+    12,
+    5,
+    13,
+    6
+   ],
+   [
+    3,
+    12,
+    5,
+    13,
+    9
+   ],
+   [
+    3,
+    12,
+    11,
+    11,
+    6
+   ],
+   [
+    3,
+    12,
+    11,
+    11,
+    9
+   ],
+   [
+    3,
+    12,
+    11,
+    13,
+    6
+   ],
+   [
+    3,
+    12,
+    9,
+    11,
+    6
+   ]
+  ],
+  "surviving_points": 199,
+  "target_date": "2026-10-24",
+  "winners": {}
+ }
+}
